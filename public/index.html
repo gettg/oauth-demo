@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8" />
+        <title>GitHub OAuth2 Demo</title>
+</head>
+
+<body>
+        <a id="login">GitHub 快捷登录</a>
+<script>
+  // TODO 填入你的 client_id
+  const client_id = 'XXXXXXXXX';
+
+  const authorize_uri = 'https://github.com/login/oauth/authorize';
+  const redirect_uri = 'http://localhost:8080/oauth/redirect';
+
+  const link = document.getElementById('login');
+  link.href = `${authorize_uri}?client_id=${client_id}&redirect_uri=${redirect_uri}`;
+</script>
+
+</body>
+
+</html>
